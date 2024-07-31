@@ -13,6 +13,7 @@
 
     /* Bundler mode */
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     // "allowImportingTsExtensions": true, // 该选项用于控制是否允许在 import 语句中导入 .ts 文件扩展名，它的取值可以是 true 或 false。但是，从 TypeScript 3.8 开始，这个选项已经被废弃了
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -26,5 +27,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.json"]
 }
