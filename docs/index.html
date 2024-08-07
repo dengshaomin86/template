@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>template download</title>
+  </head>
+  <body>
+    <h1>template download</h1>
+    <script>
+      function renderList(list) {
+        const ul = document.createElement("ul");
+        for (const item of list) {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `/${item}.zip`;
+          a.innerText = item;
+          li.appendChild(a);
+          ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+      }
+
+      fetch("./list.json")
+        .then(async (res) => {
+          renderList(await res.json());
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>
