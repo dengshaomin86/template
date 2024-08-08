@@ -14,7 +14,7 @@
         for (const item of list) {
           const li = document.createElement("li");
           const a = document.createElement("a");
-          a.href = `/${item}.zip`;
+          a.href = `/template/${item}.zip`;
           a.innerText = item;
           li.appendChild(a);
           ul.appendChild(li);
